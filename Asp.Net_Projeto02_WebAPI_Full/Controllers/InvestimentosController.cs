@@ -25,7 +25,7 @@ public class InvestimentosController : ControllerBase
 
     
     [HttpPut("{id}")]   // Requisição PUT para atualizar um item específico pelo ID
-    public ActionResult Put(int id, ProdutoFinanceiro atualizado)
+    public ActionResult Atualizar(int id, ProdutoFinanceiro atualizado)
     {
         // 1. Procuramos o item na lista pelo ID
         var itemExistente = _banco.FirstOrDefault(x => x.Id == id);
@@ -42,7 +42,7 @@ public class InvestimentosController : ControllerBase
 
     
     [HttpDelete("{id}")]    // Requisição DELETE para remover um item específico pelo ID
-    public ActionResult Delete(int id)
+    public ActionResult Deletar(int id)
     {
         // 1. Procuramos o item na lista pelo ID
         var itemExistente = _banco.FirstOrDefault(x => x.Id == id);
